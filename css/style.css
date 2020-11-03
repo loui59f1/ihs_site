@@ -12,6 +12,16 @@ body {
     overflow-x: hidden;
 }
 
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+}
+
 /*============================================================================================*/
 /* Basic for all sections */
 /*============================================================================================*/
@@ -218,20 +228,133 @@ header.header_in .main-menu > ul > li:hover > a {
     display: none;
 }
 
+
+/*============================================================================================*/
+/* REST API */
+/*============================================================================================*/
+
+
+#liste {
+    /* Boxed layout i liste, hvor data ligger i - responsivt grid */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    display: block;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 2fr));
+    grid-gap: 1em;
+    padding-bottom: 50px;
+}
+
+#liste h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+#liste .kort {
+    margin-top: 20px;
+}
+
+#liste img {
+    /* Kvadratiske billeder i oversigt vha. object fit */
+    object-fit: cover;
+    width: 25rem;
+    height: 25rem;
+    margin-top: 30px;
+}
+
+#liste article {
+    padding: 0 30px 30px 30px;
+    background-color: #fff;
+}
+
 /*============================================================================================*/
 /* Mediaqueries */
 /*============================================================================================*/
 
+@media (max-width: 430px) {
+    #liste img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
+}
 
 @media (max-width: 767px) {
     header.header {
         padding: 10px 15px;
+    }
+
+    #liste article {
+        padding: 0 0px 30px 0px;
+        background-color: #fff;
     }
 }
 
 
 /* All styles for screen size over 992px
 ================================================== */
+
+
+@media (min-width: 768px) {
+    #liste {
+        display: block;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    #liste {
+        display: block;
+    }
+
+    #liste article {
+        padding-top: 0px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .product_text {
+        padding-top: 0;
+    }
+
+    .product {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 2fr 1fr;
+        grid-auto-flow: dense;
+    }
+
+    #liste img {
+        object-fit: cover;
+        margin-top: 0;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    #liste {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-auto-flow: dense;
+    }
+
+    #liste img {
+        object-fit: cover;
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .divider {
+        width: 40vw;
+        grid-column: 1/3;
+    }
+
+    div.divider:nth-of-type(2n) {
+        display: none;
+    }
+}
+
 @media only screen and (min-width: 992px) {
     .main-menu {
         width: auto;
