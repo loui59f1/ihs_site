@@ -16,19 +16,6 @@ body {
     margin-top: -10px;
 }
 
-@media (min-width: 900px) {
-    .sectionwrapper {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 25px;
-    }
-
-    .subheader h1 {
-        padding-top: 150px;
-        font-size: 40px;
-    }
-}
-
 /* Header */
 header {
     position: fixed;
@@ -979,6 +966,15 @@ footer .row {
     font-weight: 500;
 }
 
-.icon_menu::before {
-    content: '☰' !important;
+@media (min-width: 900px) {
+    .sectionwrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 25px;
+    }
+
+    .subheader h1 {
+        padding-top: 150px;
+        font-size: 40px;
+    }
 }
