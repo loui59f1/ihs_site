@@ -1,3 +1,7 @@
+/*============================================================================================*/
+/* General */
+/*============================================================================================*/
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -8,16 +12,21 @@ body {
     overflow-x: hidden;
 }
 
+/*============================================================================================*/
+/* Basic for all sections */
+/*============================================================================================*/
+
 .row {
     max-width: 1100px;
     margin: 0 auto;
 }
 
-.logo_normal {
-    margin-top: -10px;
-}
+/*============================================================================================*/
+/* Navigation and logo */
+/*============================================================================================*/
 
-/* Header */
+/* -------------------- Header -------------------- */
+
 header {
     position: fixed;
     left: 0;
@@ -31,12 +40,8 @@ header {
     box-shadow: 0px 10px 90px -13px rgba(209, 209, 209, 1);
 }
 
-.video-text {
-    position: relative;
-    z-index: 99;
-    margin-top: 300px;
-    text-align: center;
-}
+
+/* -------------------- Subheader -------------------- */
 
 .subheader {
     background-image: url(../img/poster.jpg);
@@ -62,89 +67,14 @@ header {
     margin-top: 10px;
 }
 
-@media (max-width: 767px) {
-    header.header {
-        padding: 10px 15px;
-    }
-}
-
-header.header .logo_sticky {
-    display: none;
-}
-
-header.header.sticky {
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    border-bottom: 1px solid #ededed;
-    background-color: #fff;
-}
-
-@media (max-width: 991px) {
-    header.header.sticky {
-        padding: 10px 15px;
-    }
-}
-
-header.header.sticky .logo_normal {
-    display: none;
-}
-
-header.header.sticky .logo_sticky {
-    display: inline-block;
-}
-
-header.header_in {
-    padding: 15px 0;
-    background-color: #fff;
-    position: relative;
-    border-bottom: 1px solid #ededed;
-}
-
-header.header_in.is_sticky {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-}
-
-header a.open_close {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    z-index: 999;
-    color: #000;
-    font-size: 35px;
-    font-size: 1.8rem;
-    display: none;
-    width: 25px;
-    height: 25px;
-    text-decoration: none;
-}
-
-@media (max-width: 991px) {
-    header a.open_close {
-        display: block;
-    }
-}
-
-header a.open_close span {
-    display: none;
-}
-
-header a.open_close:hover {
-    opacity: 0.8;
-}
-
-header.sticky a.open_close,
-.header_in a.open_close {
-    color: #444;
-}
+/* -------------------- Logo -------------------- */
 
 #logo {
     float: left;
+}
+
+.logo_normal {
+    margin-top: -10px;
 }
 
 @media (max-width: 991px) {
@@ -154,15 +84,13 @@ header.sticky a.open_close,
         text-align: center;
     }
 
-    #logo img {
-        width: auto;
-        height: 40px;
+    .subheader {
+        background-size: auto;
     }
 }
 
+/* -------------------- Navigation -------------------- */
 
-/*-------- 1.3 Main Menu --------*/
-/* Menu */
 .main-menu {
     position: relative;
     z-index: 1999;
@@ -177,10 +105,6 @@ header.sticky a.open_close,
 
 .icon_submenu {
     display: none;
-}
-
-.main-menu.show {
-    transform: translateX(0);
 }
 
 .main-menu ul,
@@ -199,7 +123,8 @@ header.sticky a.open_close,
     padding: 10px;
 }
 
-/*First level styles */
+/* --- First level styles ---- */
+
 .main-menu > ul > li > a {
     color: #000;
     padding: 0 25px 10px 8px;
@@ -213,7 +138,8 @@ header.sticky a.open_close,
     opacity: 0.8;
 }
 
-/* Local Menu */
+/* ------- Local menu -------- */
+
 .local-menu {
     position: relative;
     z-index: 9;
@@ -291,6 +217,18 @@ header.header_in .main-menu > ul > li:hover > a {
 #header_menu {
     display: none;
 }
+
+/*============================================================================================*/
+/* Mediaqueries */
+/*============================================================================================*/
+
+
+@media (max-width: 767px) {
+    header.header {
+        padding: 10px 15px;
+    }
+}
+
 
 /* All styles for screen size over 992px
 ================================================== */
@@ -805,6 +743,13 @@ header.header_in .main-menu > ul > li:hover > a {
     display: block;
 }
 
+.video-text {
+    position: relative;
+    z-index: 99;
+    margin-top: 300px;
+    text-align: center;
+}
+
 @media (max-width: 767px) {
     .header-video p {
         font-size: 21px;
@@ -961,7 +906,8 @@ footer .row {
 
     .header-video {
         background-image: url('../img/poster.jpg');
-        background-size: cover;
+        background-size: auto;
+        background-position: top;
         width: 100%;
         height: 500px;
     }
