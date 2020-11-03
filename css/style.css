@@ -212,7 +212,6 @@ header.sticky a.open_close,
 .local-menu {
     position: relative;
     z-index: 9;
-    top: 24px;
     float: none;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -221,6 +220,12 @@ header.sticky a.open_close,
     transition: all 0.3s ease-in-out;
     height: 70px;
     text-align: center;
+    background-color: seagreen;
+    height: 70px;
+}
+
+.local-menu ul:first-child {
+    top: 22px;
 }
 
 .local-menu li {
@@ -249,7 +254,7 @@ header.sticky a.open_close,
 
 /*First level styles */
 .local-menu > ul > li > a {
-    color: #000;
+    color: #fff;
     padding: 0 25px 10px 8px;
     font-size: 14px;
     font-size: 0.875rem;
