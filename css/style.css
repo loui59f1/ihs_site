@@ -420,7 +420,7 @@ header.header_in .main-menu > ul > li:hover > a {
     /* Submenu*/
     .local-menu ul ul {
         position: absolute;
-        border-top: 2px solid #589442;
+        border-top: 2px solid #fff;
         z-index: 1;
         visibility: hidden;
         left: 3px;
@@ -457,7 +457,7 @@ header.header_in .main-menu > ul > li:hover > a {
         width: 0;
         position: absolute;
         pointer-events: none;
-        border-bottom-color: #589442;
+        border-bottom-color: #fff;
         border-width: 7px;
         margin-left: -7px;
     }
