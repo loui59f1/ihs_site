@@ -22,6 +22,14 @@ h2 {
     font-weight: 700;
 }
 
+.dark-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #000 !important;
+    position: relative;
+    z-index: 99;
+}
+
 /*============================================================================================*/
 /* Basic for all sections */
 /*============================================================================================*/
@@ -97,6 +105,21 @@ header {
     .subheader {
         background-size: auto;
     }
+}
+
+.burger-logo {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.burger-logo img {
+    display: block;
+    background-image: url(../img/logo.jpg);
+    background-size: cover;
+    z-index: 400;
+    position: absolute;
+    bottom: 50px;
+    width: 80%;
 }
 
 /* -------------------- Navigation -------------------- */
@@ -225,6 +248,151 @@ header.header_in .main-menu > ul > li:hover > a {
 
 #close_in,
 #header_menu {
+    display: none;
+}
+
+/* -------------------- Burger menu -------------------- */
+
+
+
+#burger-menu.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    overflow-x: hidden;
+    transition: 0.7s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 20%;
+    text-align: left;
+    margin-top: 30px;
+    list-style: none;
+}
+
+#burger-menu a {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 8px;
+}
+
+.overlay a:hover {
+    color: #0a0a0a;
+}
+
+#closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 45px;
+    cursor: pointer;
+    font-weight: 100;
+}
+
+#openbtn {
+    color: #000;
+    position: absolute;
+    top: 25px;
+    left: 22px;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 70;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    overflow-x: hidden;
+    transition: 0.7s;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+}
+
+#local-burger-menu.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 70;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: 0.7s;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+}
+
+#local-burger-menu .overlay-content {
+    position: relative;
+    top: 0;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: -15px;
+    list-style: none;
+}
+
+.pt-100 {
+    padding-top: 100px !important;
+}
+
+.pt-10 {
+    padding-top: 10px !important;
+}
+
+.pb-30 {
+    padding-bottom: 20px;
+}
+
+#local-burger-menu a {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 8px;
+}
+
+#local-burger-menu h2 {
+    font-size: 16px;
+    padding: 8px;
+}
+
+#local-burger-menu .overlay a:hover {
+    color: #0a0a0a;
+}
+
+#local-burger-menu #localclosebtn {
+    position: absolute;
+    top: 90px;
+    right: 30px;
+    font-size: 45px;
+    cursor: pointer;
+    z-index: 150;
+    color: #444;
+    font-weight: 100;
+}
+
+#local-burger-menu #openbtn {
+    color: #000;
+    position: absolute;
+    top: 25px;
+    left: 22px;
+    font-size: 25px;
+    cursor: pointer;
     display: none;
 }
 
@@ -1008,6 +1176,7 @@ video {
 
 #fall_1 ul {
     list-style: none;
+    border-radius: 5px;
 }
 
 #fall_1 li a {
@@ -1085,9 +1254,22 @@ footer .row {
         display: none;
     }
 
-    .burger-menu {
+    #burger-menu {
         display: block;
         float: right;
+    }
+
+    #openbtn {
+        display: block;
+    }
+
+    #local-burger-menu {
+        display: block;
+        float: right;
+    }
+
+    #openbtn {
+        display: block;
     }
 }
 
@@ -1110,6 +1292,13 @@ footer .row {
         background-position: top;
         width: 100%;
         height: 500px;
+    }
+
+    #season .row {
+        display: block;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        grid-gap: 1em;
+        padding: 20px 20px;
     }
 }
 
@@ -1137,6 +1326,13 @@ footer .row {
     #intro .row {
         display: block;
     }
+
+    #logo img {
+        float: none;
+        width: 60%;
+        text-align: center;
+        margin-top: 0px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1158,14 +1354,16 @@ footer .row {
     }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 999px) {
+    .local-menu ul {
+        display: none;
+    }
+}
+
+@media (max-width: 999px) {
     .subheader h1 {
         padding-top: 160px;
         font-size: 40px;
-    }
-
-    .local-menu ul {
-        display: none;
     }
 
     .icon_submenu {

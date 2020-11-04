@@ -21,8 +21,24 @@
                     <img src="img/logo_sticky.svg" alt="" class="logo_sticky">
                 </a>
             </div>
-            <div class="burger-menu">
+
+            <div id="burger-menu" class="overlay">
+                <span id="closebtn">&times;</span>
+                <div class="burger-logo">
+                    <img src="img/logo.jpg">
+                </div>
+                <ul class="overlay-content">
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="hojskole.html">Højskoleophold</a></li>
+                    <li><a href="kurser.html">Korte kurser</a></li>
+                    <li><a href="vitilbyder.html">Vi tilbyder også</a></li>
+                    <li><a href="om.html">Om IHS</a></li>
+                    <li><a href="kontakt.html">Kontakt os</a></li>
+                    <li><a href="tilmeld.html">Tilmeld dig</a></li>
+                    <li><a href="rundvisning.html">Book en rundvisning</a></li>
+                </ul>
             </div>
+            <span id="openbtn">&#9776;</span>
             <nav class="main-menu">
                 <ul>
                     <li><a href="index.html">Forside</a></li>
@@ -251,6 +267,76 @@
                 <li><a href="#">Praktisk</a></li>
             </ul>
         </nav>
+        <div id="local-burger-menu" class="overlay">
+            <span id="localclosebtn">&times;</span>
+            <ul class="overlay-content pt-100">
+                <h2>Specialefag</h2>
+                <li><a href="adventureracing.html">Adventure racing</a></li>
+                <li><a href="beachvolley.html">Beachvolley</a></li>
+                <li><a href="sejlads.html">Sejlads</a></li>
+                <li><a href="watersports.html">Kitesurf og watersports</a></li>
+                <li><a href="triathlon.html">Triathlon</a></li>
+                <li><a href="adrenalin.html">Adrenalin</a></li>
+                <li><a href="tons.html">TONS</a></li>
+                <li><a href="fitness.html">Fitnessinstruktør</a></li>
+                <li><a href="yoga.html">Yoga</a></li>
+                <li><a href="altivand.html">Alt i vand</a></li>
+                <li><a href="ihs360.html">IHS 360</a></li>
+                <li><a href="volleyball.html">Volleyball</a></li>
+            </ul>
+            <ul class="overlay-content pt-10">
+                <h2>Idrætsfag</h2>
+                <li><a href="#">Svømning</a></li>
+                <li><a href="#">Skaterhockey</a></li>
+                <li><a href="#">Beachspil</a></li>
+                <li><a href="#">Håndbold</a></li>
+                <li><a href="#">Windsurf</a></li>
+                <li><a href="#">Tennis</a></li>
+                <li><a href="#">Klatring</a></li>
+                <li><a href="#">X-fit</a></li>
+                <li><a href="#">Fodbold</a></li>
+                <li><a href="#">HEAT</a></li>
+                <li><a href="#">Fitness performance</a></li>
+                <li><a href="#">Squash/tennis</a></li>
+            </ul>
+            <ul class="overlay-content pt-10">
+                <h2>Almene fag</h2>
+                <li><a href="#">Krop og sundhed</a></li>
+                <li><a href="#">Udsigten</a></li>
+                <li><a href="#">Debatten</a></li>
+                <li><a href="#">Når jeg bliver stor</a></li>
+                <li><a href="#">Around politics</a></li>
+                <li><a href="#">Social dynamics</a></li>
+                <li><a href="#">Mød DK</a></li>
+                <li><a href="#">Livsværdier</a></li>
+                <li><a href="#">Mental styrke</a></li>
+                <li><a href="#">International class</a></li>
+                <li><a href="#">Ledelsakademi øvet</a></li>
+            </ul>
+            <ul class="overlay-content pt-10">
+                <h2>Fællesfag</h2>
+                <li><a href="#">Skolemøde</a></li>
+                <li><a href="#">Morgensang</a></li>
+                <li><a href="#">Morgensamling</a></li>
+                <li><a href="#">Fællesdans/fællesidræt</a></li>
+                <li><a href="#">Ledelsesakademi</a></li>
+                <li><a href="#">Sang/elevforedrag</a></li>
+                <li><a href="#">Kontaktgruppemøde</a></li>
+                <li><a href="#">Foredrag</a></li>
+                <li><a href="#">Fællesaften</a></li>
+            </ul>
+            <ul class="overlay-content pt-10">
+                <h2>Rejser</h2>
+                <li><a href="#">Skitur i Alperne</a></li>
+                <li><a href="#">Tanzania/Zanzibar</a></li>
+                <li><a href="#">Island</a></li>
+                <li><a href="#">Kreta</a></li>
+            </ul>
+            <ul class="overlay-content pt-10 pb-30">
+                <li><a href="#">Ekstra oplevelser</a></li>
+                <li><a href="#">Praktisk</a></li>
+            </ul>
+        </div>
         <div class="scroll-box">
             <section id="season" class="bg_gray">
                 <div class="row">
@@ -364,23 +450,7 @@
             <h2>Footer</h2>
         </div>
     </footer>
-    <!-- Tom sektion til alle drinks -->
-    <section id="liste"></section>
-    <!-- Indhold af template tag er skabelonen til drinks der skal ligge i #liste -->
-    <template>
-        <article id="change_color">
-            <div class="product">
-                <img src="" alt="" class="black_white">
-                <div class="product_text">
-                    <div class="text_top">
-                        <h2></h2>
-                        <p class="kort"></p>
-                    </div>
-                </div>
-            </div>
-        </article>
-        <div class="divider"></div>
-    </template>
+
     <script src="js/script.js"></script>
 </body>
 

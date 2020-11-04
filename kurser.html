@@ -21,8 +21,23 @@
                     <img src="img/logo_sticky.svg" alt="" class="logo_sticky">
                 </a>
             </div>
-            <div class="burger-menu">
+            <div id="burger-menu" class="overlay">
+                <span id="closebtn">&times;</span>
+                <div class="burger-logo">
+                    <img src="img/logo.jpg">
+                </div>
+                <ul class="overlay-content">
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="hojskole.html">Højskoleophold</a></li>
+                    <li><a href="kurser.html">Korte kurser</a></li>
+                    <li><a href="vitilbyder.html">Vi tilbyder også</a></li>
+                    <li><a href="om.html">Om IHS</a></li>
+                    <li><a href="kontakt.html">Kontakt os</a></li>
+                    <li><a href="tilmeld.html">Tilmeld dig</a></li>
+                    <li><a href="rundvisning.html">Book en rundvisning</a></li>
+                </ul>
             </div>
+            <span id="openbtn">&#9776;</span>
             <nav class="main-menu">
                 <ul>
                     <li><a href="index.html">Forside</a></li>
@@ -198,6 +213,37 @@
                 </li>
             </ul>
         </nav>
+        <div id="local-burger-menu" class="overlay">
+            <span id="localclosebtn">&times;</span>
+            <ul class="overlay-content pt-100">
+                <h2>Golf</h2>
+                <li><a href="#">Fag</a></li>
+                <li><a href="#">Fag</a></li>
+                <li><a href="#">Fag</a></li>
+                <li><a href="#">Fag</a></li>
+            </ul>
+            <ul class="overlay-content pt-10">
+                <h2>Dans</h2>
+                <li><a href="#">Fag</a></li>
+                <li><a href="#">Fag</a></li>
+                <li><a href="#">Fag</a></li>
+                <li><a href="#">Fag</a></li>
+            </ul>
+            <ul class="overlay-content pt-10">
+                <h2>Familie</h2>
+                <li><a href="#">Fag</a></li>
+                <li><a href="#">Fag</a></li>
+                <li><a href="#">Fag</a></li>
+                <li><a href="#">Fag</a></li>
+            </ul>
+            <ul class="overlay-content pt-10">
+                <h2>Historie</h2>
+                <li><a href="#">Fag</a></li>
+                <li><a href="#">Fag</a></li>
+                <li><a href="#">Fag</a></li>
+                <li><a href="#">Fag</a></li>
+            </ul>
+        </div>
         <section id="intro" class="bg_gray">
             <div class="row">
                 <div class="column">
@@ -215,9 +261,7 @@
         </div>
     </footer>
 
-    <script src="js/common_func.js"></script>
-    <script src="js/common_scripts.js"></script>
-    <script src="js/common_scripts.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
