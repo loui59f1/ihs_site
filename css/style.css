@@ -20,6 +20,10 @@ body {
     padding-top: 10px !important;
 }
 
+.pt-50 {
+    padding-top: 50px;
+}
+
 .pb-30 {
     padding-bottom: 20px;
 }
