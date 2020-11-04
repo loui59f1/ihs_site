@@ -102,7 +102,7 @@ video {
 
 #intro .row {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
     grid-gap: 1em;
     padding: 20px 20px;
 }
@@ -121,10 +121,7 @@ video {
 }
 
 #slider .row {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    grid-gap: 1em;
-    padding: 20px 20px;
+    display: block;
 }
 
 #bloglist {
@@ -148,6 +145,66 @@ video {
     grid-gap: 1em;
     padding: 20px 20px;
 }
+
+/*============================================================================================*/
+/* Slideshow */
+
+#wrapper {
+    width: 100%;
+    max-width: 1100px;
+    position: relative;
+}
+
+#carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+#carousel::-webkit-scrollbar {
+    height: 0;
+}
+
+#tilbage,
+#frem {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+}
+
+#tilbage {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    display: none;
+}
+
+#frem {
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+#indhold {
+    display: grid;
+    grid-gap: 16px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.slide_billede {
+    width: 310px;
+    height: 310px;
+}
+
 
 /*============================================================================================*/
 /* Højskoleophold sections */
@@ -262,6 +319,35 @@ video {
     display: grid;
     padding: 20px 20px;
 }
+
+/*============================================================================================*/
+/* Rest API sections */
+
+#post {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+#post img {
+    width: 400px;
+}
+
+.kort p {
+    margin-bottom: 10px;
+}
+
+#fag {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.kort strong {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+}
+
 
 /*============================================================================================*/
 /* Kurser sections */
@@ -720,6 +806,10 @@ footer .row {
         grid-gap: 10px;
         grid-template-columns: 2fr 1fr;
         grid-auto-flow: dense;
+    }
+
+    .product h2 {
+        margin-bottom: 20px;
     }
 
     #liste img {
@@ -1323,6 +1413,14 @@ footer .row {
 @media (max-width: 540px) {
     #intro .row {
         display: block;
+    }
+
+    #posts .product {
+        display: block;
+    }
+
+    #post img {
+        width: 100%;
     }
 
     #logo img {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om IHS - Idrætshøjskolen Sønderborg</title>
+    <title>Idrætshøjskolen Sønderborg</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -174,24 +174,49 @@
             </div>
         </div>
         <nav class="local-menu">
-            <a href="#" class="icon_submenu">Se menupunkter</a>
+            <a href="#" class="icon_submenu">Se alle fag</a>
             <ul>
-                <li><a href="om.html?id=176">Værdigrundlag</a></li>
-                <li><a href="om.html?id=177">Personale</a></li>
-                <li><a href="om.html?id=178">Bestyrelse</a></li>
-                <li><a href="om.html?id=179">Faciliteter</a></li>
-                <li><a href="om.html?id=180">Årsplaner</a></li>
+                <li class="submenu">
+                    <a href="#" class="show-submenu">Teambuilding</a>
+                    <ul>
+                        <li><a href="tilbud.html?id=159">OL i samarbejde</a></li>
+                        <li><a href="tilbud.html?id=160">Adventure race</a></li>
+                        <li><a href="tilbud.html?id=161">Disc golf</a></li>
+                        <li><a href="tilbud.html?id=162">Klatring</a></li>
+                        <li><a href="tilbud.html?id=163">Mountainbike</a></li>
+                        <li><a href="tilbud.html?id=164">Verdenshandelsspillet</a></li>
+                        <li><a href="tilbud.html?id=165">Overraskelse</a></li>
+                        <li><a href="tilbud.html?id=166">Adrenalinkick</a></li>
+                        <li><a href="tilbud.html?id=167">Fangerne på fortet</a></li>
+                        <li><a href="tilbud.html?id=168">Sport og idræt</a></li>
+                        <li><a href="tilbud.html?id=169">Teamopstart</a></li>
+                        <li><a href="tilbud.html?id=170">Teambuilding</a></li>
+                    </ul>
+                </li>
+                <li><a href="tilbud.html?id=171">Lokaleudlejning</a></li>
+                <li><a href="tilbud.html?id=172">Gymnasier</a></li>
             </ul>
         </nav>
         <div id="local-burger-menu" class="overlay">
             <span id="localclosebtn">&times;</span>
             <ul class="overlay-content pt-100">
-                <h2>Om IHS</h2>
-                <li><a href="#">Værdigrundlag</a></li>
-                <li><a href="#">Personale</a></li>
-                <li><a href="#">Bestyrelse</a></li>
-                <li><a href="#">Faciliteter</a></li>
-                <li><a href="#">Årsplaner</a></li>
+                <h2>Teambuilding</h2>
+                <li><a href="tilbud.html?id=159">OL i samarbejde</a></li>
+                <li><a href="tilbud.html?id=160">Adventure race</a></li>
+                <li><a href="tilbud.html?id=161">Disc golf</a></li>
+                <li><a href="tilbud.html?id=162">Klatring</a></li>
+                <li><a href="tilbud.html?id=163">Mountainbike</a></li>
+                <li><a href="tilbud.html?id=164">Verdenshandelsspillet</a></li>
+                <li><a href="tilbud.html?id=165">Overraskelse</a></li>
+                <li><a href="tilbud.html?id=166">Adrenalinkick</a></li>
+                <li><a href="tilbud.html?id=167">Fangerne på fortet</a></li>
+                <li><a href="tilbud.html?id=168">Sport og idræt</a></li>
+                <li><a href="tilbud.html?id=169">Teamopstart</a></li>
+                <li><a href="tilbud.html?id=170">Teambuilding</a></li>
+            </ul>
+            <ul class="overlay-content pt-10">
+                <li><a href="tilbud.html?id=171">Lokaleudlejning</a></li>
+                <li><a href="tilbud.html?id=172">Gymnasier</a></li>
             </ul>
         </div>
 
@@ -220,21 +245,22 @@
     <script>
         let urlParams = new URLSearchParams(window.location.search);
         let id = urlParams.get("id");
-        let post;
+        let tilbud;
         document.addEventListener("DOMContentLoaded", getTheDish);
         async function getTheDish() {
 
-            let url = "http://www.weblouise.dk/kea/2_semester/09_cms/ihs_wordpress/wordpress/wp-json/wp/v2/om/" + id;
+            let url = "http://www.weblouise.dk/kea/2_semester/09_cms/ihs_wordpress/wordpress/wp-json/wp/v2/tilbud/" + id;
             let jsonData = await fetch(url);
-            post = await jsonData.json();
+            tilbud = await jsonData.json();
             //console.log("LOADING DONE",theDish);
             //            showDishes();
 
-            document.querySelector("h2").textContent = post.title.rendered;
-            document.querySelector(".product_img").src = "img/" + post.slug + ".jpg";
-            document.querySelector(".kort").innerHTML = post.content.rendered;
-            document.querySelector(".subheader_title").innerHTML = post.title.rendered;
-            document.querySelector(".post_title").innerHTML = post.excerpt.rendered;
+            document.querySelector("h2").textContent = tilbud.title;
+            document.querySelector(".product_img").src = "img/" + tilbud.slug + ".jpg";
+            document.querySelector(".kort").innerHTML = tilbud.content.rendered;
+            document.querySelector(".subheader_title").innerHTML = "";
+            document.querySelector(".subheader_title").textContent = tilbud.title.rendered;
+            document.querySelector(".post_title").innerHTML = tilbud.excerpt.rendered;
             document.querySelector(".arrow_back").addEventListener("click", function() {
                 window.history.back();
 
