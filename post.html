@@ -280,8 +280,8 @@
                             <li><a href="#">Kreta</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Ekstra oplevelser</a></li>
-                    <li><a href="#">Praktisk</a></li>
+                    <li><a href="post.html?id=152">Ekstra oplevelser</a></li>
+                    <li><a href="post.html?id=151">Praktisk</a></li>
                 </ul>
             </nav>
             <div id="local-burger-menu" class="overlay">
@@ -364,8 +364,8 @@
                     <li><a href="#">Kreta</a></li>
                 </ul>
                 <ul class="overlay-content pt-10 pb-30">
-                    <li><a href="#">Ekstra oplevelser</a></li>
-                    <li><a href="#">Praktisk</a></li>
+                    <li><a href="post.html?id=152">Ekstra oplevelser</a></li>
+                    <li><a href="post.html?id=151">Praktisk</a></li>
                 </ul>
             </div>
 
@@ -405,7 +405,6 @@
                 //console.log("LOADING DONE",theDish);
                 //            showDishes();
 
-                document.querySelector("h2").textContent = fag.title;
                 document.querySelector(".product_img").src = "img/" + fag.slug + ".jpg";
                 document.querySelector(".kort").innerHTML = fag.content.rendered;
                 document.querySelector(".subheader_title").innerHTML = fag.title.rendered;
