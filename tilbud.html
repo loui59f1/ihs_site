@@ -69,7 +69,7 @@
                                     <li><a href="post.html?id=122">Håndbold</a></li>
                                     <li><a href="post.html?id=124">Windsurf</a></li>
                                     <li><a href="post.html?id=126">Tennis</a></li>
-                                    <li><a href="post.html?id=">Klatring</a></li>
+                                    <li><a href="post.html?id=128">Klatring</a></li>
                                     <li><a href="post.html?id=130">X-fit</a></li>
                                     <li><a href="post.html?id=140">Fodbold</a></li>
                                     <li><a href="post.html?id=134">HEAT</a></li>
@@ -94,36 +94,36 @@
                             </li>
                             <li class="third-level"><a href="#">Interessefag</a>
                                 <ul>
-                                    <li><a href="post.html?id=">Sportsmassør</a></li>
-                                    <li><a href="post.html?id=">Det kreative værksted</a></li>
-                                    <li><a href="post.html?id=">Førstehjælp</a></li>
-                                    <li><a href="post.html?id=">Pausen</a></li>
-                                    <li><a href="post.html?id=">Brætspil</a></li>
-                                    <li><a href="post.html?id=">Vildmarksliv</a></li>
-                                    <li><a href="post.html?id=">Vild med dans</a></li>
-                                    <li><a href="post.html?id=">Friluftsliv</a></li>
-                                    <li><a href="post.html?id=">E-sport</a></li>
+                                    <li><a href="post.html?id=197">Sportsmassør</a></li>
+                                    <li><a href="post.html?id=198">Det kreative værksted</a></li>
+                                    <li><a href="post.html?id=199">Førstehjælp</a></li>
+                                    <li><a href="post.html?id=200">Pausen</a></li>
+                                    <li><a href="post.html?id=201">Brætspil</a></li>
+                                    <li><a href="post.html?id=230">Vildmarksliv</a></li>
+                                    <li><a href="post.html?id=241">Vild med dans</a></li>
+                                    <li><a href="post.html?id=244">Friluftsliv</a></li>
+                                    <li><a href="post.html?id=248">E-sport</a></li>
                                 </ul>
                             </li>
                             <li class="third-level"><a href="#">Fællesfag</a>
                                 <ul>
-                                    <li><a href="post.html?id=">Skolemøde</a></li>
-                                    <li><a href="post.html?id=">Morgensang</a></li>
-                                    <li><a href="post.html?id=">Morgensamling</a></li>
-                                    <li><a href="post.html?id=">Fællesdans/fællesidræt</a></li>
-                                    <li><a href="post.html?id=">Ledelsesakademi</a></li>
-                                    <li><a href="post.html?id=">Sang/elevforedrag</a></li>
-                                    <li><a href="post.html?id=">Kontaktgruppemøde</a></li>
-                                    <li><a href="post.html?id=">Foredrag</a></li>
-                                    <li><a href="post.html?id=">Fællesaften</a></li>
+                                    <li><a href="post.html?id=215">Skolemøde</a></li>
+                                    <li><a href="post.html?id=229">Morgensang</a></li>
+                                    <li><a href="post.html?id=234">Morgensamling</a></li>
+                                    <li><a href="post.html?id=237">Fællesdans/fællesidræt</a></li>
+                                    <li><a href="post.html?id=243">Ledelsesakademi</a></li>
+                                    <li><a href="post.html?id=246">Sang/elevforedrag</a></li>
+                                    <li><a href="post.html?id=247">Kontaktgruppemøde</a></li>
+                                    <li><a href="post.html?id=251">Foredrag</a></li>
+                                    <li><a href="post.html?id=252">Fællesaften</a></li>
                                 </ul>
                             </li>
                             <li class="third-level"><a href="#">Rejser</a>
                                 <ul>
-                                    <li><a href="post.html?id=">Skitur i Alperne</a></li>
-                                    <li><a href="post.html?id=">Tanzania/Zanzibar</a></li>
-                                    <li><a href="post.html?id=">Island</a></li>
-                                    <li><a href="post.html?id=">Kreta</a></li>
+                                    <li><a href="post.html?id=214">Skitur i Alperne</a></li>
+                                    <li><a href="post.html?id=220">Tanzania/Zanzibar</a></li>
+                                    <li><a href="post.html?id=255">Island</a></li>
+                                    <li><a href="post.html?id=257">Kreta</a></li>
                                 </ul>
                             </li>
                             <li><a href="post.html?id=152">Ekstra oplevelser</a></li>
@@ -165,6 +165,7 @@
         </div>
     </header>
     <!-- /header -->
+
 
     <main>
         <div class="subheader">
@@ -256,11 +257,11 @@
             //            showDishes();
 
             document.querySelector("h2").textContent = tilbud.title;
-            document.querySelector(".product_img").src = "img/" + tilbud.slug + ".jpg";
+            document.querySelector(".product_img").src = tilbud.billede.guid;
             document.querySelector(".kort").innerHTML = tilbud.content.rendered;
             document.querySelector(".subheader_title").innerHTML = "";
             document.querySelector(".subheader_title").textContent = tilbud.title.rendered;
-            document.querySelector(".post_title").innerHTML = tilbud.excerpt.rendered;
+            document.querySelector(".post_title").innerHTML = tilbud.subtitle;
             document.querySelector(".arrow_back").addEventListener("click", function() {
                 window.history.back();
 
