@@ -151,7 +151,7 @@
                         <a href="om.html?id=181" class="show-submenu">Om IHS</a>
                         <ul>
                             <li><a href="om.html?id=176">Værdigrundlag</a></li>
-                            <li><a href="om.html?id=177">Personale</a></li>
+                            <li><a href="personale.html">Personale</a></li>
                             <li><a href="om.html?id=178">Bestyrelse</a></li>
                             <li><a href="om.html?id=179">Faciliteter</a></li>
                             <li><a href="om.html?id=180">Årsplaner</a></li>
@@ -180,11 +180,11 @@
         <section id="intro" class="bg_gray">
             <div class="row">
                 <div class="column">
-                    <h2>Overskrift her</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. <br><br>Dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h2></h2>
+                    <p class="intro_tekst"></p>
                 </div>
                 <div class="column">
-                    <img src="img/intro.jpg">
+                    <img class="intro_img" src="">
                 </div>
             </div>
         </section>
@@ -300,6 +300,27 @@
         });
         let width = carousel.offsetWidth;
         window.addEventListener("resize", e => (width = carousel.offsetWidth));
+
+    </script>
+    <script>
+        // script til at hente indhold fra forside page
+
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id");
+        let sider;
+        document.addEventListener("DOMContentLoaded", getTheDish);
+        async function getTheDish() {
+
+            let url = "http://www.weblouise.dk/kea/2_semester/09_cms/ihs_wordpress/wordpress/wp-json/wp/v2/sider/287";
+            let jsonData = await fetch(url);
+            sider = await jsonData.json();
+            //console.log("LOADING DONE",theDish);
+            //            showDishes();
+
+            document.querySelector(".intro_img").src = sider.billede.guid;
+            document.querySelector(".intro_tekst").innerHTML = sider.content.rendered;
+            document.querySelector("h2").textContent = sider.overskrift;
+        }
 
     </script>
 </body>
