@@ -9,6 +9,105 @@
     <link rel="stylesheet" href="css/icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        #modal {
+            /* Styling af popup element */
+            background-color: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            z-index: 300;
+        }
+
+        #modal article {
+            /* Flex er brugt i popup, så tekst og billeder er på hver sin side */
+            display: flex;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: auto;
+            background-color: #fff;
+            margin: 4rem auto;
+            box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.8);
+            position: fixed;
+        }
+
+        .text-modal {
+            padding: 30px;
+        }
+
+        #modal .column {
+            padding: 10px;
+            flex-basis: 400px;
+            flex-grow: 1;
+        }
+
+        #modal img {
+            max-width: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        #close {
+            /* Container element for luk knappen - styling og cursor kontrol */
+            position: fixed;
+            top: 1em;
+            right: 1.5em;
+            background-color: #fff;
+            color: #000;
+            padding: .1em;
+            cursor: pointer;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 25px;
+        }
+
+        @media screen and (max-width: 850px) {
+            #modal article {
+                display: flex;
+                width: 90%;
+                height: auto;
+                background-color: #fff;
+                margin-left: 0px;
+                margin-right: 50px;
+                margin-bottom: 0;
+                box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.8);
+            }
+
+            #modal .column {
+                padding: 0px;
+                flex-basis: 200px;
+                flex-grow: 1;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+
+            #modal article {
+                display: block;
+                position: absolute;
+                overflow: scroll;
+            }
+
+            #modal img {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                object-fit: cover;
+                width: 17rem;
+                height: 17rem;
+            }
+
+            #close {
+                top: 0.2em;
+                right: 0.5em;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
@@ -158,7 +257,7 @@
                         </ul>
                     </li>
                     <li><a href="#">Kontakt os</a></li>
-                    <button><a href="#">Tilmeld dig</a></button>
+                    <button><a class="signup" href="#">Tilmeld dig</a></button>
                     <button><a href="#">Book en rundvisning</a></button>
                 </ul>
             </nav>
@@ -236,6 +335,22 @@
             <h2>Footer</h2>
         </div>
     </footer>
+
+    <!-- Modal sektion, ikke synlig medmindre den klikkes på -->
+    <section id="modal">
+        <article>
+            <div id="close">x</div>
+            <div class="column img">
+                <img src="img/modal_img.jpg" alt="">
+            </div>
+            <div class="column">
+                <div class="text-modal">
+                    <h2>Tilmeld dig højskolen</h2>
+                    <p><span class="lang">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
+                </div>
+            </div>
+        </article>
+    </section>
 
     <script src="js/script.js"></script>
     <script>
@@ -320,6 +435,31 @@
             document.querySelector(".intro_img").src = sider.billede.guid;
             document.querySelector(".intro_tekst").innerHTML = sider.content.rendered;
             document.querySelector("h2").textContent = sider.overskrift;
+        }
+
+    </script>
+    <script>
+        // Når man klikker på knap vil funktionen tilmeldDig (modal/popup) kaldes
+        document.querySelector(".signup").addEventListener("click", tilmeldDig);
+
+        // Denne funktion sætter vores drink info ind i den klargjorte modal sektion
+        function tilmeldDig() {
+            modal.style.display = "block";
+            modal.querySelector("h2").textContent = drink.title.rendered;
+            modal.querySelector(".lang").innerHTML = drink.content.rendered;
+            modal.querySelector("img").src = "img/" + drink.slug + ".jpg";
+
+        }
+
+
+        // Ved klik på krydset lukkes popup/modal
+        document.querySelector("#close").addEventListener("click", () => modal.style.display = "none");
+
+        // Ved klik udenfor modal lukkes den også - kode fundet online.
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
 
     </script>
