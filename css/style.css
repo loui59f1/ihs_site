@@ -80,9 +80,6 @@ p {
 }
 
 .header-video {
-    background-image: url(../img/poster.png);
-    background-position: center;
-    background-size: cover;
     position: relative;
     overflow: hidden;
     background-color: lightgray;
@@ -1658,8 +1655,10 @@ footer .row {
 /* MAX-WIDTH 1100px ========================= */
 
 @media (max-width: 1100px) {
+
+
     #videoBG {
-        width: 200%;
+        width: 100%;
         height: auto;
     }
 
