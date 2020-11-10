@@ -234,9 +234,142 @@
     </main>
     <footer>
         <div class="row">
-            <h2>Footer</h2>
+            <div class="column">
+
+                <p>En højskole med succesoplevelser for hjernen og hjertet.</p>
+                <p>Social icons</p>
+            </div>
+            <div class="column">
+                <p>Kontakt info</p>
+            </div>
+            <div class="column">
+                <p>Quick links</p>
+            </div>
+            <div class="column">
+                <p>Bloglist</p>
+            </div>
         </div>
     </footer>
+    <div class="bottom_bar"></div>
+
+    <!-- Modal sektion, ikke synlig medmindre den klikkes på -->
+    <section id="modal">
+        <article>
+            <div id="close">x</div>
+            <div class="column img">
+                <img src="img/modal_img.jpg" alt="" class="modal_img">
+            </div>
+            <div class="column">
+                <div class="text-modal">
+                    <h2>Tilmeld dig</h2>
+                    <p><span class="lang">Vælg først hvilken periode eller ophold, <br>du ønsker at tilmelde dig til.</span></p>
+                    <button class="forår_21 blue_1">Forårsophold 2021 - start d. 6. januar</button>
+                    <button class="efterår_21 blue_2">Efterårsophold 2021 - start d. 11. august</button>
+                    <button class="forår_22 blue_3">Forårsophold 2022 - start d. 6. januar</button>
+                    <button class="efterår_22 blue_4">Efterårsophold 2022 - start d. 10. august</button>
+                    <img src="img/logo.png" width="150px" style="position: absolute; bottom: 30px; right: 200px;">
+                </div>
+                <div class="text_modal_2 hide">
+                    <h2>Forårsophold 2021</h2>
+                    <img class="forms_img" src="img/forms.png">
+                    <button class="next_button_2 blue_1">Tilmeld</button>
+                </div>
+                <div class="text_modal_3 hide">
+                    <h2>Efterårsophold 2021</h2>
+                    <img class="forms_img" src="img/forms.png">
+                    <button class="next_button_3 blue_1">Tilmeld</button>
+                </div>
+                <div class="text_modal_4 hide">
+                    <h2>Forårsophold 2022</h2>
+                    <img class="forms_img" src="img/forms.png">
+                    <button class="next_button_4 blue_1">Tilmeld</button>
+                </div>
+                <div class="text_modal_5 hide">
+                    <h2>Efterårsophold 2022</h2>
+                    <img class="forms_img" src="img/forms.png">
+                    <button class="next_button_5 blue_1">Tilmeld</button>
+                </div>
+                <div class="thankyou_page hide">
+                    <h2>Tak for tilmeldingen!</h2>
+                    <p>Vi sender en e-mail til dig, når vi har set din tilmelding.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <script>
+        // Når man klikker på knap vil funktionen tilmeldDig (modal/popup) kaldes
+        document.querySelector(".signup").addEventListener("click", tilmeldDig);
+
+        // Denne funktion sætter vores drink info ind i den klargjorte modal sektion
+        function tilmeldDig() {
+            modal.style.display = "block";
+
+        }
+
+
+        // Ved klik på krydset lukkes popup/modal
+        document.querySelector("#close").addEventListener("click", () => modal.style.display = "none");
+
+        // Ved klik udenfor modal lukkes den også - kode fundet online.
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", eventListenerOnButtons);
+
+        function eventListenerOnButtons() {
+            document.querySelector(".signup").addEventListener("click", showFirstPage);
+            document.querySelector(".forår_21").addEventListener("click", forår21);
+            document.querySelector(".efterår_21").addEventListener("click", efterår21);
+            document.querySelector(".forår_22").addEventListener("click", forår22);
+            document.querySelector(".efterår_22").addEventListener("click", efterår22);
+        }
+
+        function showFirstPage() {
+            document.querySelector(".text_modal_2").classList.add("hide");
+            document.querySelector(".text_modal_3").classList.add("hide");
+            document.querySelector(".text_modal_4").classList.add("hide");
+            document.querySelector(".text_modal_5").classList.add("hide");
+        }
+
+        function forår21() {
+            document.querySelector(".text-modal").classList.add("hide");
+            document.querySelector(".text_modal_2").classList.remove("hide");
+            document.querySelector(".next_button_2").addEventListener("click", thankYou);
+        }
+
+        function efterår21() {
+            document.querySelector(".text-modal").classList.add("hide");
+            document.querySelector(".text_modal_3").classList.remove("hide");
+            document.querySelector(".next_button_3").addEventListener("click", thankYou);
+        }
+
+        function forår22() {
+            document.querySelector(".text-modal").classList.add("hide");
+            document.querySelector(".text_modal_4").classList.remove("hide");
+            document.querySelector(".next_button_4").addEventListener("click", thankYou);
+        }
+
+        function efterår22() {
+            document.querySelector(".text-modal").classList.add("hide");
+            document.querySelector(".text_modal_5").classList.remove("hide");
+            document.querySelector(".next_button_5").addEventListener("click", thankYou);
+        }
+
+        function thankYou() {
+            console.log("test")
+            document.querySelector(".text_modal_2").classList.add("hide");
+            document.querySelector(".text_modal_3").classList.add("hide");
+            document.querySelector(".text_modal_4").classList.add("hide");
+            document.querySelector(".text_modal_5").classList.add("hide");
+            document.querySelector(".thankyou_page").classList.remove("hide");
+        }
+
+    </script>
 
     <script src="js/script.js"></script>
     <script>
