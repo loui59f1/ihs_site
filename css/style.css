@@ -224,7 +224,7 @@ video {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
+    width: 60%;
     height: auto;
     background-color: #fff;
     margin: 4rem auto;
@@ -246,7 +246,7 @@ video {
     width: 100%;
     margin-bottom: 10px;
     font-family: 'Quicksand', sans-serif;
-    border-radius:
+    font-size: 15px;
 }
 
 .blue_1 {
@@ -266,7 +266,17 @@ video {
 }
 
 .text-modal {
+    text-align: center;
     padding: 30px;
+}
+
+.text-modal h2 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.text-modal p {
+    margin-bottom: 40px;
 }
 
 .text_modal_2 {
@@ -285,12 +295,18 @@ video {
     padding: 30px;
 }
 
+.forms_img {
+    margin: 40px 0;
+    margin-bottom: 60px;
+    width: 90%;
+}
+
 .thankyou_page {
     padding: 30px;
 }
 
 #modal .column {
-    padding: 10px;
+    padding: 0px;
     flex-basis: 400px;
     flex-grow: 1;
 }
@@ -643,11 +659,158 @@ filter_section {
 
 #fall_2 {
     padding: 50px 0;
+    text-align: center;
+    background-color: #333F78;
+    color: #fff;
+}
+
+#fall_2 p {
+    margin-bottom: 50px;
 }
 
 #fall_2 .row {
     display: grid;
-    padding: 20px 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 2em;
+}
+
+#fall_2 ul {
+    list-style: none;
+    border-radius: 5px;
+}
+
+#fall_2 li a {
+    background-color: #fff;
+    margin-left: -40px;
+    font-size: 0.8125rem;
+    color: #444;
+    text-decoration: none;
+    border-bottom: 1px solid #ededed;
+    display: block;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+#fall_2 li a:hover {
+    background-color: #f9f9f9;
+    color: #333F78;
+    padding-left: 18px;
+    opacity: 1;
+}
+
+#fall_2 .column {
+    text-align: left;
+}
+
+#fall_2 h3 {
+    font-size: 13px;
+    padding: 12px 15px;
+    background-color: #fff;
+    color: #000;
+}
+
+#spring_1 {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #333F78;
+    color: #fff;
+}
+
+#spring_1 p {
+    margin-bottom: 50px;
+}
+
+#spring_1 .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 2em;
+}
+
+#spring_1 ul {
+    list-style: none;
+    border-radius: 5px;
+}
+
+#spring_1 li a {
+    background-color: #fff;
+    margin-left: -40px;
+    font-size: 0.8125rem;
+    color: #444;
+    text-decoration: none;
+    border-bottom: 1px solid #ededed;
+    display: block;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+#spring_1 li a:hover {
+    background-color: #f9f9f9;
+    color: #333F78;
+    padding-left: 18px;
+    opacity: 1;
+}
+
+#spring_1 .column {
+    text-align: left;
+}
+
+#spring_1 h3 {
+    font-size: 13px;
+    padding: 12px 15px;
+    background-color: #fff;
+    color: #000;
+}
+
+#spring_2 {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #333F78;
+    color: #fff;
+}
+
+#spring_2 p {
+    margin-bottom: 50px;
+}
+
+#spring_2 .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 2em;
+}
+
+#spring_2 ul {
+    list-style: none;
+    border-radius: 5px;
+}
+
+#spring_2 li a {
+    background-color: #fff;
+    margin-left: -40px;
+    font-size: 0.8125rem;
+    color: #444;
+    text-decoration: none;
+    border-bottom: 1px solid #ededed;
+    display: block;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+#spring_2 li a:hover {
+    background-color: #f9f9f9;
+    color: #333F78;
+    padding-left: 18px;
+    opacity: 1;
+}
+
+#spring_2 .column {
+    text-align: left;
+}
+
+#spring_2 h3 {
+    font-size: 13px;
+    padding: 12px 15px;
+    background-color: #fff;
+    color: #000;
 }
 
 /*============================================================================================*/
@@ -717,7 +880,7 @@ header {
     background-color: #fff;
     height: 90px;
     padding: 10px 50px;
-    box-shadow: 0px 10px 90px -13px rgba(209, 209, 209, 1);
+    box-shadow: 0px 10px 90px -23px rgba(0, 0, 0, 0.1);
 }
 
 .subheader {
@@ -1709,13 +1872,10 @@ footer .row {
 @media (max-width: 1450px) {
 
     .header-video {
-        width: 150%;
-        background-position: right;
+        width: 100%;
+        height: 400px;
     }
 
-    #videoBG {
-        ;
-    }
 }
 
 
@@ -1755,15 +1915,15 @@ footer .row {
 
 /* MAX-WIDTH 767px ========================= */
 
-@media (max-width: 767px) {
+@media (max-width: 1267px) {
     #videoBG {
         display: none;
     }
 
     .header-video {
         background-image: url('../img/bg_img.PNG');
-        background-size: auto;
-        background-position: left;
+        background-size: cover;
+        background-position: center;
         width: 100%;
         height: 500px;
     }
