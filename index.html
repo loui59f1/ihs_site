@@ -305,16 +305,98 @@
         <article>
             <div id="close">x</div>
             <div class="column img">
-                <img src="img/modal_img.jpg" alt="">
+                <img src="img/modal_img.jpg" alt="" class="modal_img">
             </div>
             <div class="column">
                 <div class="text-modal">
                     <h2>Tilmeld dig højskolen</h2>
-                    <p><span class="lang">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
+                    <p><span class="lang">Vælg først hvilken periode eller ophold du ønsker at tilmelde dig til.</span></p>
+                    <button class="forår_21 blue_1">Forårsophold 2021 - start d. 6. januar</button>
+                    <button class="efterår_21 blue_2">Efterårsophold 2021 - start d. 11. august</button>
+                    <button class="forår_22 blue_3">Forårsophold 2022 - start d. 6. januar</button>
+                    <button class="efterår_22 blue_4">Efterårsophold 2022 - start d. 10. august</button>
+                    <img src="img/logo.png" width="200px">
+                </div>
+                <div class="text_modal_2 hide">
+                    <h2>Forårsophold 2021</h2>
+                    <img src="img/forms.png">
+                    <button class="next_button">Tilmeld</button>
+                </div>
+                <div class="text_modal_3 hide">
+                    <h2>Efterårsophold 2021</h2>
+                    <img src="img/forms.png">
+                    <button class="next_button">Tilmeld</button>
+                </div>
+                <div class="text_modal_4 hide">
+                    <h2>Forårsophold 2022</h2>
+                    <img src="img/forms.png">
+                    <button class="next_button">Tilmeld</button>
+                </div>
+                <div class="text_modal_5 hide">
+                    <h2>Efterårsophold 2022</h2>
+                    <img src="img/forms.png">
+                    <button class="next_button">Tilmeld</button>
+                </div>
+                <div class="thankyou_page hide">
+                    <h2>Tak for tilmeldingen!</h2>
+                    <p>Vi sender en e-mail til dig, når vi har set din tilmelding.</p>
                 </div>
             </div>
         </article>
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", eventListenerOnButtons);
+
+        function eventListenerOnButtons() {
+            document.querySelector(".signup").addEventListener("click", showFirstPage);
+            document.querySelector(".forår_21").addEventListener("click", forår21);
+            document.querySelector(".efterår_21").addEventListener("click", efterår21);
+            document.querySelector(".forår_22").addEventListener("click", forår22);
+            document.querySelector(".efterår_22").addEventListener("click", efterår22);
+        }
+
+        function showFirstPage() {
+            document.querySelector(".text_modal_2").classList.add("hide");
+            document.querySelector(".text_modal_3").classList.add("hide");
+            document.querySelector(".text_modal_4").classList.add("hide");
+            document.querySelector(".text_modal_5").classList.add("hide");
+        }
+
+        function forår21() {
+            document.querySelector(".text-modal").classList.add("hide");
+            document.querySelector(".text_modal_2").classList.remove("hide");
+            document.querySelector(".next_button").addEventListener("click", thankYou);
+        }
+
+        function efterår21() {
+            document.querySelector(".text-modal").classList.add("hide");
+            document.querySelector(".text_modal_3").classList.remove("hide");
+            document.querySelector(".next_button").addEventListener("click", thankYou);
+        }
+
+        function forår22() {
+            document.querySelector(".text-modal").classList.add("hide");
+            document.querySelector(".text_modal_4").classList.remove("hide");
+            document.querySelector(".next_button").addEventListener("click", thankYou);
+        }
+
+        function efterår22() {
+            document.querySelector(".text-modal").classList.add("hide");
+            document.querySelector(".text_modal_5").classList.remove("hide");
+            document.querySelector(".next_button").addEventListener("click", thankYou);
+        }
+
+        function thankYou() {
+            console.log("test")
+            document.querySelector(".text_modal_2").classList.add("hide");
+            document.querySelector(".text_modal_3").classList.add("hide");
+            document.querySelector(".text_modal_4").classList.add("hide");
+            document.querySelector(".text_modal_5").classList.add("hide");
+            document.querySelector(".thankyou_page").classList.remove("hide");
+        }
+
+    </script>
 
     <script src="js/script.js"></script>
     <script>
@@ -410,9 +492,6 @@
         // Denne funktion sætter vores drink info ind i den klargjorte modal sektion
         function tilmeldDig() {
             modal.style.display = "block";
-            modal.querySelector("h2").textContent = drink.title.rendered;
-            modal.querySelector(".lang").innerHTML = drink.content.rendered;
-            modal.querySelector("img").src = "img/" + drink.slug + ".jpg";
 
         }
 
