@@ -1,4 +1,4 @@
-window.addEventListener("load", sidenVises);
+document.addEventListener("DOMContentLoaded", sidenVises);
 
 function sidenVises() {
     console.log(sidenVises);

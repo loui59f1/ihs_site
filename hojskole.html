@@ -356,26 +356,23 @@
                     <div class="column">
                         <h2>Forårsophold</h2>
                         <p>Start januar</p>
-                        <img src="img/placeholder.png">
+                        <img class="spring" src="img/placeholder.png">
                     </div>
                     <div class="column">
                         <h2>Efterårsophold</h2>
                         <p>Start august</p>
-                        <img src="img/placeholder.png">
-                    </div>
-                    <div class="arrow_icon">
-                        <a href="#fall_1"><img src="img/arrow_down.png"></a>
+                        <img class="fall" src="img/placeholder.png">
                     </div>
                 </div>
             </section>
-            <section id="fall_1">
-                <h2>Efterårsophold</h2>
+            <section id="fall_1" class="hide">
+                <h2>Efterårsophold (1. periode)</h2>
                 <p>Opholdet strækker sig over 2 perioder. For hver periode kan du vælge nye valg.
                     <br>Vælg ét fag fra hver kategori.
                 </p>
                 <div class="period-btn">
-                    <a href="">1. periode</a>
-                    <a href="">2. periode</a>
+                    <button class="period_1" href="">1. periode</button>
+                    <button class="period_2" href="">2. periode</button>
                 </div>
                 <div class="row">
                     <div class="column">
@@ -448,12 +445,236 @@
                     </div>
                 </div>
             </section>
-            <section id="fall_2" style="display: none">
+            <section id="fall_2" class="hide">
+                <h2>Efterårsophold (2. periode)</h2>
+                <div class="period-btn">
+                    <button class="period_1" href="">1. periode</button>
+                    <button class="period_2" href="">2. periode</button>
+                </div>
                 <div class="row">
-                    <h2>Efterårsophold (2. periode)</h2>
-                    <p>Opholdet strækker sig over 2 perioder. For hver periode kan du vælge nye valg. <br>Vælg ét fag fra hver kategori.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. Dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </p>
+                    <div class="column">
+                        <h3 class="category_title">Specialefag</h3>
+                        <ul>
+                            <li><a href="adventureracing.html">Adventure racing</a></li>
+                            <li><a href="beachvolley.html">Beachvolley</a></li>
+                            <li><a href="sejlads.html">Sejlads</a></li>
+                            <li><a href="watersports.html">Kitesurf og watersports</a></li>
+                            <li><a href="triathlon.html">Triathlon</a></li>
+                            <li><a href="adrenalin.html">Adrenalin</a></li>
+                            <li><a href="tons.html">TONS</a></li>
+                            <li><a href="fitness.html">Fitnessinstruktør</a></li>
+                            <li><a href="yoga.html">Yoga</a></li>
+                            <li><a href="altivand.html">Alt i vand</a></li>
+                            <li><a href="ihs360.html">IHS 360</a></li>
+                            <li><a href="volleyball.html">Volleyball</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3 class="category_title">Almene fag</h3>
+                        <ul>
+                            <li><a href="adventureracing.html">Adventure racing</a></li>
+                            <li><a href="beachvolley.html">Beachvolley</a></li>
+                            <li><a href="sejlads.html">Sejlads</a></li>
+                            <li><a href="watersports.html">Kitesurf og watersports</a></li>
+                            <li><a href="triathlon.html">Triathlon</a></li>
+                            <li><a href="adrenalin.html">Adrenalin</a></li>
+                            <li><a href="tons.html">TONS</a></li>
+                            <li><a href="fitness.html">Fitnessinstruktør</a></li>
+                            <li><a href="yoga.html">Yoga</a></li>
+                            <li><a href="altivand.html">Alt i vand</a></li>
+                            <li><a href="ihs360.html">IHS 360</a></li>
+                            <li><a href="volleyball.html">Volleyball</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3 class="category_title">Idrætsfag</h3>
+                        <ul>
+                            <li><a href="adventureracing.html">Adventure racing</a></li>
+                            <li><a href="beachvolley.html">Beachvolley</a></li>
+                            <li><a href="sejlads.html">Sejlads</a></li>
+                            <li><a href="watersports.html">Kitesurf og watersports</a></li>
+                            <li><a href="triathlon.html">Triathlon</a></li>
+                            <li><a href="adrenalin.html">Adrenalin</a></li>
+                            <li><a href="tons.html">TONS</a></li>
+                            <li><a href="fitness.html">Fitnessinstruktør</a></li>
+                            <li><a href="yoga.html">Yoga</a></li>
+                            <li><a href="altivand.html">Alt i vand</a></li>
+                            <li><a href="ihs360.html">IHS 360</a></li>
+                            <li><a href="volleyball.html">Volleyball</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3 class="category_title">Interessefag</h3>
+                        <ul>
+                            <li><a href="adventureracing.html">Adventure racing</a></li>
+                            <li><a href="beachvolley.html">Beachvolley</a></li>
+                            <li><a href="sejlads.html">Sejlads</a></li>
+                            <li><a href="watersports.html">Kitesurf og watersports</a></li>
+                            <li><a href="triathlon.html">Triathlon</a></li>
+                            <li><a href="adrenalin.html">Adrenalin</a></li>
+                            <li><a href="tons.html">TONS</a></li>
+                            <li><a href="fitness.html">Fitnessinstruktør</a></li>
+                            <li><a href="yoga.html">Yoga</a></li>
+                            <li><a href="altivand.html">Alt i vand</a></li>
+                            <li><a href="ihs360.html">IHS 360</a></li>
+                            <li><a href="volleyball.html">Volleyball</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="spring_1" class="hide">
+                <h2>Forårsophold (1. periode)</h2>
+
+                <div class="period-btn">
+                    <button class="period_1" href="">1. periode</button>
+                    <button class="period_2" href="">2. periode</button>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <h3 class="category_title">Specialefag</h3>
+                        <ul>
+                            <li><a href="adventureracing.html">Adventure racing</a></li>
+                            <li><a href="beachvolley.html">Beachvolley</a></li>
+                            <li><a href="sejlads.html">Sejlads</a></li>
+                            <li><a href="watersports.html">Kitesurf og watersports</a></li>
+                            <li><a href="triathlon.html">Triathlon</a></li>
+                            <li><a href="adrenalin.html">Adrenalin</a></li>
+                            <li><a href="tons.html">TONS</a></li>
+                            <li><a href="fitness.html">Fitnessinstruktør</a></li>
+                            <li><a href="yoga.html">Yoga</a></li>
+                            <li><a href="altivand.html">Alt i vand</a></li>
+                            <li><a href="ihs360.html">IHS 360</a></li>
+                            <li><a href="volleyball.html">Volleyball</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3 class="category_title">Almene fag</h3>
+                        <ul>
+                            <li><a href="adventureracing.html">Adventure racing</a></li>
+                            <li><a href="beachvolley.html">Beachvolley</a></li>
+                            <li><a href="sejlads.html">Sejlads</a></li>
+                            <li><a href="watersports.html">Kitesurf og watersports</a></li>
+                            <li><a href="triathlon.html">Triathlon</a></li>
+                            <li><a href="adrenalin.html">Adrenalin</a></li>
+                            <li><a href="tons.html">TONS</a></li>
+                            <li><a href="fitness.html">Fitnessinstruktør</a></li>
+                            <li><a href="yoga.html">Yoga</a></li>
+                            <li><a href="altivand.html">Alt i vand</a></li>
+                            <li><a href="ihs360.html">IHS 360</a></li>
+                            <li><a href="volleyball.html">Volleyball</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3 class="category_title">Idrætsfag</h3>
+                        <ul>
+                            <li><a href="adventureracing.html">Adventure racing</a></li>
+                            <li><a href="beachvolley.html">Beachvolley</a></li>
+                            <li><a href="sejlads.html">Sejlads</a></li>
+                            <li><a href="watersports.html">Kitesurf og watersports</a></li>
+                            <li><a href="triathlon.html">Triathlon</a></li>
+                            <li><a href="adrenalin.html">Adrenalin</a></li>
+                            <li><a href="tons.html">TONS</a></li>
+                            <li><a href="fitness.html">Fitnessinstruktør</a></li>
+                            <li><a href="yoga.html">Yoga</a></li>
+                            <li><a href="altivand.html">Alt i vand</a></li>
+                            <li><a href="ihs360.html">IHS 360</a></li>
+                            <li><a href="volleyball.html">Volleyball</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3 class="category_title">Interessefag</h3>
+                        <ul>
+                            <li><a href="adventureracing.html">Adventure racing</a></li>
+                            <li><a href="beachvolley.html">Beachvolley</a></li>
+                            <li><a href="sejlads.html">Sejlads</a></li>
+                            <li><a href="watersports.html">Kitesurf og watersports</a></li>
+                            <li><a href="triathlon.html">Triathlon</a></li>
+                            <li><a href="adrenalin.html">Adrenalin</a></li>
+                            <li><a href="tons.html">TONS</a></li>
+                            <li><a href="fitness.html">Fitnessinstruktør</a></li>
+                            <li><a href="yoga.html">Yoga</a></li>
+                            <li><a href="altivand.html">Alt i vand</a></li>
+                            <li><a href="ihs360.html">IHS 360</a></li>
+                            <li><a href="volleyball.html">Volleyball</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="spring_2" class="hide">
+                <h2>Forårsophold (2. periode)</h2>
+                <div class="period-btn">
+                    <button class="period_1" href="">1. periode</button>
+                    <button class="period_2" href="">2. periode</button>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <h3 class="category_title">Specialefag</h3>
+                        <ul>
+                            <li><a href="adventureracing.html">Adventure racing</a></li>
+                            <li><a href="beachvolley.html">Beachvolley</a></li>
+                            <li><a href="sejlads.html">Sejlads</a></li>
+                            <li><a href="watersports.html">Kitesurf og watersports</a></li>
+                            <li><a href="triathlon.html">Triathlon</a></li>
+                            <li><a href="adrenalin.html">Adrenalin</a></li>
+                            <li><a href="tons.html">TONS</a></li>
+                            <li><a href="fitness.html">Fitnessinstruktør</a></li>
+                            <li><a href="yoga.html">Yoga</a></li>
+                            <li><a href="altivand.html">Alt i vand</a></li>
+                            <li><a href="ihs360.html">IHS 360</a></li>
+                            <li><a href="volleyball.html">Volleyball</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3 class="category_title">Almene fag</h3>
+                        <ul>
+                            <li><a href="adventureracing.html">Adventure racing</a></li>
+                            <li><a href="beachvolley.html">Beachvolley</a></li>
+                            <li><a href="sejlads.html">Sejlads</a></li>
+                            <li><a href="watersports.html">Kitesurf og watersports</a></li>
+                            <li><a href="triathlon.html">Triathlon</a></li>
+                            <li><a href="adrenalin.html">Adrenalin</a></li>
+                            <li><a href="tons.html">TONS</a></li>
+                            <li><a href="fitness.html">Fitnessinstruktør</a></li>
+                            <li><a href="yoga.html">Yoga</a></li>
+                            <li><a href="altivand.html">Alt i vand</a></li>
+                            <li><a href="ihs360.html">IHS 360</a></li>
+                            <li><a href="volleyball.html">Volleyball</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3 class="category_title">Idrætsfag</h3>
+                        <ul>
+                            <li><a href="adventureracing.html">Adventure racing</a></li>
+                            <li><a href="beachvolley.html">Beachvolley</a></li>
+                            <li><a href="sejlads.html">Sejlads</a></li>
+                            <li><a href="watersports.html">Kitesurf og watersports</a></li>
+                            <li><a href="triathlon.html">Triathlon</a></li>
+                            <li><a href="adrenalin.html">Adrenalin</a></li>
+                            <li><a href="tons.html">TONS</a></li>
+                            <li><a href="fitness.html">Fitnessinstruktør</a></li>
+                            <li><a href="yoga.html">Yoga</a></li>
+                            <li><a href="altivand.html">Alt i vand</a></li>
+                            <li><a href="ihs360.html">IHS 360</a></li>
+                            <li><a href="volleyball.html">Volleyball</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3 class="category_title">Interessefag</h3>
+                        <ul>
+                            <li><a href="adventureracing.html">Adventure racing</a></li>
+                            <li><a href="beachvolley.html">Beachvolley</a></li>
+                            <li><a href="sejlads.html">Sejlads</a></li>
+                            <li><a href="watersports.html">Kitesurf og watersports</a></li>
+                            <li><a href="triathlon.html">Triathlon</a></li>
+                            <li><a href="adrenalin.html">Adrenalin</a></li>
+                            <li><a href="tons.html">TONS</a></li>
+                            <li><a href="fitness.html">Fitnessinstruktør</a></li>
+                            <li><a href="yoga.html">Yoga</a></li>
+                            <li><a href="altivand.html">Alt i vand</a></li>
+                            <li><a href="ihs360.html">IHS 360</a></li>
+                            <li><a href="volleyball.html">Volleyball</a></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>
@@ -464,6 +685,45 @@
         </div>
     </footer>
 
+    <script>
+        document.querySelector(".spring").addEventListener("click", springSection);
+        document.querySelector(".fall").addEventListener("click", fallSection);
+
+        function springSection() {
+            document.querySelector("#spring_1").classList.remove("hide");
+            document.querySelector(".period_1").addEventListener("click", showSpringPeriod1);
+            document.querySelector(".period_2").addEventListener("click", showSpringPeriod2);
+        }
+
+        function showSpringPeriod1() {
+            document.querySelector("#spring_2").classList.add("hide");
+            document.querySelector("#spring_1").classList.remove("hide");
+        }
+
+        function showSpringPeriod2() {
+            document.querySelector("#spring_1").classList.add("hide");
+            document.querySelector("#spring_2").classList.remove("hide");
+        }
+
+        function fallSection() {
+            document.querySelector("#fall_1").classList.remove("hide");
+            document.querySelector(".period_1").addEventListener("click", showFallPeriod1);
+            document.querySelector(".period_2").addEventListener("click", showFallPeriod2);
+        }
+
+        function showFallPeriod1() {
+            console.log("fall-p-1")
+            document.querySelector("#fall_2").classList.add("hide");
+            document.querySelector("#fall_1").classList.remove("hide");
+        }
+
+        function showFallPeriod2() {
+            console.log("fall-p-2")
+            document.querySelector("#fall_1").classList.add("hide");
+            document.querySelector("#fall_2").classList.remove("hide");
+        }
+
+    </script>
     <script src="js/script.js"></script>
 </body>
 
