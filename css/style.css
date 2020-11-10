@@ -32,6 +32,10 @@ body {
     background-color: #f2f2f2;
 }
 
+.bg_white {
+    background-color: #fff;
+}
+
 /*============================================================================================*/
 /* Typography */
 /*============================================================================================*/
@@ -48,7 +52,9 @@ h2 {
 
 h3 {}
 
-p {}
+p {
+    line-height: 1.6;
+}
 
 /*============================================================================================*/
 /* Basic for all sections */
@@ -132,6 +138,7 @@ video {
 #intro img {
     width: 400px;
     margin-top: -20px;
+    float: right;
 }
 
 #slider {
@@ -159,9 +166,221 @@ video {
 
 #iconbox .row {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    grid-gap: 1em;
-    padding: 20px 20px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#iconbox .column {
+    padding: 0 40px;
+}
+
+#iconbox h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+#bloglist .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#modal {
+    /* Styling af popup element */
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 300;
+}
+
+#modal article {
+    /* Flex er brugt i popup, så tekst og billeder er på hver sin side */
+    display: flex;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: auto;
+    background-color: #fff;
+    margin: 4rem auto;
+    box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.8);
+    position: fixed;
+}
+
+.text-modal {
+    padding: 30px;
+}
+
+#modal .column {
+    padding: 10px;
+    flex-basis: 400px;
+    flex-grow: 1;
+}
+
+#modal img {
+    max-width: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#close {
+    /* Container element for luk knappen - styling og cursor kontrol */
+    position: fixed;
+    top: 1em;
+    right: 1.5em;
+    background-color: #fff;
+    color: #000;
+    padding: .1em;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+.overskrift,
+filter_section {
+    margin: 0 auto;
+    width: 80vw;
+}
+
+.personaleter {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+#filter_section {
+    width: 100%;
+}
+
+
+
+.filter_nav {
+    max-width: 1100px;
+    margin: 50px auto;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.filter_nav h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #000;
+}
+
+.filter_nav h3 {
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.valgt {
+    color: green !important;
+}
+
+
+.personale {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 10px 90px -13px rgba(209, 209, 209, 1);
+}
+
+.personale h3 {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.e-mail-container {
+    background-image: url("img/mail_icon.png");
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    float: right;
+}
+
+#personaleinfo {
+    background-color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    width: 100%;
+}
+
+#bloglist .column {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 10px 90px -13px rgba(209, 209, 209, 1);
+}
+
+#call-to-action {
+    background: rgb(104, 168, 73);
+    background: linear-gradient(180deg, rgba(104, 168, 73, 1) 0%, rgba(66, 106, 47, 1) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 50px 50px;
+}
+
+.color_text {
+    color: #D90061;
+}
+
+@media screen and (max-width: 850px) {
+    #modal article {
+        display: flex;
+        width: 90%;
+        height: auto;
+        background-color: #fff;
+        margin-left: 0px;
+        margin-right: 50px;
+        margin-bottom: 0;
+        box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.8);
+    }
+
+    #modal .column {
+        padding: 0px;
+        flex-basis: 200px;
+        flex-grow: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #modal article {
+        display: block;
+        position: absolute;
+        overflow: scroll;
+    }
+
+    #modal img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        object-fit: cover;
+        width: 17rem;
+        height: 17rem;
+    }
+
+    #close {
+        top: 0.2em;
+        right: 0.5em;
+    }
 }
 
 /*============================================================================================*/
@@ -743,7 +962,6 @@ header {
 footer {
     padding: 50px 0;
     background-color: #191919;
-    margin-top: 50px;
     color: #fff;
 }
 
@@ -1423,6 +1641,10 @@ footer .row {
         height: auto;
     }
 
+    #intro .row {
+        grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+        grid-gap: 25px;
+    }
 }
 
 /* MAX-WIDTH 767px ========================= */
@@ -1450,10 +1672,16 @@ footer .row {
 
 /* MAX-WIDTH 1130px ========================= */
 
-@media (max-width: 1130px) {
+@media (max-width: 900px) {
     #intro img {
-        margin-top: 20px;
+        display: block;
+        margin-top: 40px;
+        position: static;
         width: 100%;
+    }
+
+    #iconbox .column {
+        margin-bottom: 25px;
     }
 }
 
@@ -1478,6 +1706,16 @@ footer .row {
         text-align: center;
         margin-top: 0px;
     }
+
+
+    #iconbox .row {
+        display: block;
+    }
+
+    #iconbox .column {
+        margin-bottom: 25px;
+    }
+}
 }
 
 /* MAX-WIDTH 768px ========================= */

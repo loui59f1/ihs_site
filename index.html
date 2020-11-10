@@ -9,108 +9,11 @@
     <link rel="stylesheet" href="css/icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <style>
-        #modal {
-            /* Styling af popup element */
-            background-color: rgba(0, 0, 0, 0.6);
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 20px;
-            width: 100vw;
-            height: 100vh;
-            display: none;
-            z-index: 300;
-        }
-
-        #modal article {
-            /* Flex er brugt i popup, så tekst og billeder er på hver sin side */
-            display: flex;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 800px;
-            height: auto;
-            background-color: #fff;
-            margin: 4rem auto;
-            box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.8);
-            position: fixed;
-        }
-
-        .text-modal {
-            padding: 30px;
-        }
-
-        #modal .column {
-            padding: 10px;
-            flex-basis: 400px;
-            flex-grow: 1;
-        }
-
-        #modal img {
-            max-width: 300px;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        #close {
-            /* Container element for luk knappen - styling og cursor kontrol */
-            position: fixed;
-            top: 1em;
-            right: 1.5em;
-            background-color: #fff;
-            color: #000;
-            padding: .1em;
-            cursor: pointer;
-            font-family: 'Quicksand', sans-serif;
-            font-size: 25px;
-        }
-
-        @media screen and (max-width: 850px) {
-            #modal article {
-                display: flex;
-                width: 90%;
-                height: auto;
-                background-color: #fff;
-                margin-left: 0px;
-                margin-right: 50px;
-                margin-bottom: 0;
-                box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.8);
-            }
-
-            #modal .column {
-                padding: 0px;
-                flex-basis: 200px;
-                flex-grow: 1;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-
-            #modal article {
-                display: block;
-                position: absolute;
-                overflow: scroll;
-            }
-
-            #modal img {
-                margin-top: 20px;
-                margin-bottom: 20px;
-                object-fit: cover;
-                width: 17rem;
-                height: 17rem;
-            }
-
-            #close {
-                top: 0.2em;
-                right: 0.5em;
-            }
-        }
-
-    </style>
 </head>
 
 <body>
+
+    <div class="topbar"></div>
 
     <header class="header">
         <div class="container">
@@ -267,13 +170,15 @@
 
     <main>
         <div class="header-video">
-            <!--
+
             <video id="videoBG" poster="img/poster.JPG" autoplay muted loop>
                 <source src="video/video.mp4" type="video/mp4">
-            </video>-->
+            </video>
+<!--
             <div class="video-text">
                 <h1>Velkommen til Idrætshøjskolen Sønderborg</h1>
             </div>
+-->
 
         </div>
         <!-- /header-video -->
@@ -286,6 +191,32 @@
                 </div>
                 <div class="column">
                     <img class="intro_img" src="">
+                </div>
+            </div>
+        </section>
+        <section id="iconbox" class="bg_white">
+            <div class="row">
+                <div class="column">
+                    <img src="img/icon_box_4.PNG" class="icon_img">
+                    <h3 class="icon_title">Fantastisk <span class="color_text">beliggenhed</span></h3>
+                    <p class="icon_text">Idrætshøjskolen er beliggende i Sønderborg i Jylland, tæt på naturen med skov og vand i smukke omgivelser.</p>
+                </div>
+                <div class="column">
+                    <img src="img/icon_box_2.PNG" class="icon_img">
+                    <h3 class="icon_title"><span class="color_text">Fælleskabet</span> fylder</h3>
+                    <p class="icon_text">På idrætshøjskolen spiller fælleskab en bærende rolle. Det er vigtigt at den enkelte elev kan udtrykke sig selv og være en del af et fællesskab.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img src="img/icon_box_1.PNG" class="icon_img">
+                    <h3 class="icon_title">I <span class="color_text">sportens</span> tegn</h3>
+                    <p class="icon_text">Idræt er et centralt omdrejningspunkt for højskolen og en værdi i sig selv, den skaber glæde, begejstring og mening for den enkelte og fællesskabet.</p>
+                </div>
+                <div class="column">
+                    <img src="img/icon_box_3.PNG" class="icon_img">
+                    <h3 class="icon_title">Personlig <span class="color_text">udvikling</span></h3>
+                    <p class="icon_text">Højskolen udfordrer elevernes kompetencer og erkendelsesgrundlag på en legende og eksperimenterende måde, samt har fokus på den personlige udvikling.</p>
                 </div>
             </div>
         </section>
@@ -323,12 +254,26 @@
         </section>
         <section id="bloglist">
             <div class="row">
-                <h2>Bloglist</h2>
+                <div class="column">
+                    <img src="" class="blog_img">
+                    <h3 class="blog_title">Hej</h3>
+                    <p class="blog_text">Hej</p>
+                </div>
+                <div class="column">
+                    <img src="" class="blog_img">
+                    <h3 class="blog_title">Hej</h3>
+                    <p class="blog_text">Hej</p>
+                </div>
+                <div class="column">
+                    <img src="" class="blog_img">
+                    <h3 class="blog_title">Hej</h3>
+                    <p class="blog_text">Hej</p>
+                </div>
             </div>
         </section>
-        <section id="iconbox">
+        <section id="call-to-action">
             <div class="row">
-                <h2>Iconbox</h2>
+                <h2>CTA (tilmeld dig)</h2>
             </div>
         </section>
     </main>
