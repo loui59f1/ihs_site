@@ -1626,7 +1626,7 @@ footer .row {
 
 /* MAX-WIDTH 1450px ========================= */
 
-@media (max-width: 1450px) {
+@media (max-width: 1200px) {
     #videoBG {
         width: 200%;
         height: auto;
