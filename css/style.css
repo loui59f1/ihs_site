@@ -71,7 +71,7 @@ p {
 .divider_heading {
     height: 10px;
     width: 80px;
-    border-bottom: 2px solid green;
+    border-bottom: 2px solid #96D2E1;
     margin-bottom: 25px;
 }
 
@@ -196,6 +196,7 @@ video {
     grid-gap: 20px;
     text-align: center;
     margin-bottom: 30px;
+    padding: 0;
 }
 
 #modal {
@@ -334,13 +335,25 @@ filter_section {
 
 #bloglist .column {
     background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 10px 40px -13px rgba(209, 209, 209, 1);
+}
+
+.blog_title {
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 10px;
+}
+
+#bloglist .text_column {
+    background-color: #f2f2f2;
     padding: 20px;
-    box-shadow: 0px 10px 90px -13px rgba(209, 209, 209, 1);
+    box-shadow: none;
 }
 
 #call-to-action {
     background: rgb(104, 168, 73);
-    background: linear-gradient(180deg, rgba(104, 168, 73, 1) 0%, rgba(66, 106, 47, 1) 100%);
+    background-image: url(../img/poster.png);
+    background-size: cover;
     color: #fff;
     text-align: center;
     padding: 50px 50px;
@@ -396,7 +409,7 @@ filter_section {
 
 #wrapper {
     width: 100%;
-    max-width: 1100px;
+
     position: relative;
 }
 
@@ -448,6 +461,7 @@ filter_section {
 .slide_billede {
     width: 310px;
     height: 310px;
+
 }
 
 
