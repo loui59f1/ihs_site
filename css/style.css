@@ -25,7 +25,7 @@ body {
 }
 
 .pb-30 {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .bg_gray {
@@ -221,19 +221,19 @@ video {
 #modal article {
     /* Flex er brugt i popup, så tekst og billeder er på hver sin side */
     display: flex;
-    top: 40%;
+    top: 43%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 65%;
     height: auto;
     background-color: #fff;
     margin: 4rem auto;
-    box-shadow: 0px 0px 14px -4px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.3);
     position: fixed;
 }
 
 #modal p {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 #modal button {
@@ -247,6 +247,10 @@ video {
     margin-bottom: 10px;
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;
+}
+
+#modal h2 {
+    margin-bottom: 20px;
 }
 
 .blue_1 {
@@ -265,34 +269,37 @@ video {
     background-color: #04458E;
 }
 
+.modal_logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 140px;
+}
+
+.text_modal_2,
+.text_modal_3,
+.text_modal_4,
+.text_modal_5,
 .text-modal {
     text-align: center;
     padding: 30px;
 }
 
+.text_modal_2,
+.text_modal_3,
+.text_modal_4,
+.text_modal_5,
 .text-modal h2 {
     font-size: 30px;
     margin-top: 20px;
 }
 
+.text_modal_2,
+.text_modal_3,
+.text_modal_4,
+.text_modal_5,
 .text-modal p {
     margin-bottom: 40px;
-}
-
-.text_modal_2 {
-    padding: 30px;
-}
-
-.text_modal_3 {
-    padding: 30px;
-}
-
-.text_modal_4 {
-    padding: 30px;
-}
-
-.text_modal_5 {
-    padding: 30px;
 }
 
 .forms_img {
@@ -309,12 +316,15 @@ video {
     padding: 0px;
     flex-basis: 400px;
     flex-grow: 1;
+    overflow: hidden;
+    margin-bottom: -5px;
 }
 
 .modal_img {
-    max-width: 500px;
+    height: 100%;
     width: 100%;
     object-fit: cover;
+    overflow: hidden;
 }
 
 .text_modal {
@@ -469,14 +479,6 @@ filter_section {
         overflow: scroll;
     }
 
-    #modal img {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        object-fit: cover;
-        width: 17rem;
-        height: 17rem;
-    }
-
     #close {
         top: 0.2em;
         right: 0.5em;
@@ -547,30 +549,21 @@ filter_section {
 /*============================================================================================*/
 /* Højskoleophold sections */
 
-.scroll-box {
-    scroll-snap-type: mandatory;
-    scroll-snap-points-y: repeat(300px);
-    scroll-snap-type: y mandatory;
-}
-
-.scroll-box section {
-    scroll-snap-align: start;
-}
-
-.arrow_icon {
-    width: 80px !important;
-    position: relative;
-}
-
 #season {
-    padding: 50px 0;
+    padding: 50px;
 }
 
 #season .row {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    grid-gap: 1em;
-    padding: 20px 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 3em;
+    padding: 20px 70px;
+}
+
+#season .column {
+    box-shadow: 0px 10px 40px -13px rgba(209, 209, 209, 1);
+    padding: 20px;
+    background-color: #fff;
 }
 
 #season .row a {
@@ -581,13 +574,19 @@ filter_section {
     text-align: center;
 }
 
-#season img {
-    width: 70%;
-}
+#season img {}
 
 #season h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 28px;
+}
+
+.spring {
+    cursor: pointer;
+}
+
+.fall {
+    cursor: pointer;
 }
 
 #fall_1 {
@@ -648,13 +647,16 @@ filter_section {
 }
 
 .period-btn button {
+    font-family: 'Quicksand', sans-serif;
     text-decoration: none;
     color: #fff;
     background-color: seagreen;
-    padding: 12px 15px;
+    padding: 12px 30px;
     border-radius: 5px;
     margin-right: 15px;
     border: none;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 #fall_2 {
@@ -1820,6 +1822,7 @@ footer .row {
     .main-menu {
         width: 100%;
     }
+
 }
 
 /* MAX-WIDTH 767px ========================= */
@@ -1876,6 +1879,117 @@ footer .row {
         height: 400px;
     }
 
+}
+
+@media (max-width: 1550px) {
+
+    #modal article {
+        /* Flex er brugt i popup, så tekst og billeder er på hver sin side */
+        display: flex;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: auto;
+        background-color: #fff;
+        margin: 4rem auto;
+        box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.3);
+        position: fixed;
+    }
+}
+
+@media (max-width: 1300px) {
+
+    #modal article {
+        /* Flex er brugt i popup, så tekst og billeder er på hver sin side */
+        display: flex;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: auto;
+        background-color: #fff;
+        margin: 4rem auto;
+        box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.3);
+        position: fixed;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    #modal article {
+        /* Flex er brugt i popup, så tekst og billeder er på hver sin side */
+        display: flex;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: auto;
+        background-color: #fff;
+        margin: 4rem auto;
+        box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.3);
+        position: fixed;
+    }
+}
+
+@media (max-width: 969px) {
+
+    .modal_img {
+        display: none;
+    }
+
+    .modal_logo {
+        display: block;
+
+    }
+
+    #modal {
+        padding: 0;
+    }
+
+    .text_modal_2,
+    .text_modal_3,
+    .text_modal_4,
+    .text_modal_5,
+    .text-modal {
+        padding: 0;
+    }
+
+    #modal article {
+        /* Flex er brugt i popup, så tekst og billeder er på hver sin side */
+        display: block;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: auto;
+        background-color: #fff;
+        margin: 4rem auto;
+        padding: 20px;
+        box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.3);
+        position: fixed;
+    }
+
+    #modal h2 {
+        font-size: 26px;
+    }
+
+    .forms_img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+
+    #modal article {
+        width: 90%;
+        height: auto;
+        background-color: #fff;
+        margin: 4rem auto;
+        padding: 20px;
+        box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.3);
+        position: fixed;
+    }
 }
 
 

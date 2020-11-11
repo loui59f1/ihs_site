@@ -352,22 +352,22 @@
         <div class="scroll-box">
             <section id="season" class="bg_gray">
                 <div class="row">
-                    <div class="column">
+                    <div class="column spring">
                         <h2>Forårsophold</h2>
-                        <p>Start januar</p>
-                        <img class="spring" src="img/placeholder.png">
+                        <p class="pb-30">Start januar</p>
+                        <img class="" src="img/spring_icon.png" width="120px" height="120px">
                     </div>
-                    <div class="column">
+                    <div class="column fall">
                         <h2>Efterårsophold</h2>
-                        <p>Start august</p>
-                        <img class="fall" src="img/placeholder.png">
+                        <p class="pb-30">Start august</p>
+                        <img class="" src="img/fall_icon.png" width="120px" height="120px">
                     </div>
                 </div>
             </section>
             <section id="fall_1" class="hide">
                 <h2>Efterårsophold (1. periode)</h2>
                 <p>Opholdet strækker sig over 2 perioder. For hver periode kan du vælge nye valg.
-                    <br>Vælg ét fag fra hver kategori.
+                    <br>Du kan vælge ét fag fra hver kategori.
                 </p>
                 <div class="period-btn">
                     <button class="period_1" href="">1. periode</button>
@@ -446,6 +446,9 @@
             </section>
             <section id="fall_2" class="hide">
                 <h2>Efterårsophold (2. periode)</h2>
+                <p>Opholdet strækker sig over 2 perioder. For hver periode kan du vælge nye valg.
+                    <br>Du kan vælge ét fag fra hver kategori.
+                </p>
                 <div class="period-btn">
                     <button class="period_1" href="">1. periode</button>
                     <button class="period_2" href="">2. periode</button>
@@ -523,6 +526,9 @@
             </section>
             <section id="spring_1" class="hide">
                 <h2>Forårsophold (1. periode)</h2>
+                <p>Opholdet strækker sig over 2 perioder. For hver periode kan du vælge nye valg.
+                    <br>Du kan vælge ét fag fra hver kategori.
+                </p>
 
                 <div class="period-btn">
                     <button class="period_1" href="">1. periode</button>
@@ -601,6 +607,9 @@
             </section>
             <section id="spring_2" class="hide">
                 <h2>Forårsophold (2. periode)</h2>
+                <p>Opholdet strækker sig over 2 perioder. For hver periode kan du vælge nye valg.
+                    <br>Du kan vælge ét fag fra hver kategori.
+                </p>
                 <div class="period-btn">
                     <button class="period_1" href="">1. periode</button>
                     <button class="period_2" href="">2. periode</button>
@@ -804,46 +813,55 @@
             document.querySelector(".text-modal").classList.add("hide");
             document.querySelector(".text_modal_5").classList.remove("hide");
             document.querySelector(".next_button_5").addEventListener("click", thankYou);
-            }
+        }
 
-            function thankYou() {
+        function thankYou() {
             console.log("test")
             document.querySelector(".text_modal_2").classList.add("hide");
             document.querySelector(".text_modal_3").classList.add("hide");
             document.querySelector(".text_modal_4").classList.add("hide");
             document.querySelector(".text_modal_5").classList.add("hide");
             document.querySelector(".thankyou_page").classList.remove("hide");
-            }
+        }
 
-            </script>
+    </script>
     <script>
-        document.querySelector(".spring").addEventListener("click", springSection);
-        document.querySelector(".fall").addEventListener("click", fallSection);
+        document.addEventListener("DOMContentLoaded", startSeasons);
+
+        function startSeasons() {
+            console.log("Start seasons");
+            document.querySelector(".spring").addEventListener("click", springSection);
+            document.querySelector(".fall").addEventListener("click", fallSection);
+        }
 
         function springSection() {
+            console.log("springsection");
             document.querySelector("#spring_1").classList.remove("hide");
             document.querySelector(".period_1").addEventListener("click", showSpringPeriod1);
             document.querySelector(".period_2").addEventListener("click", showSpringPeriod2);
         }
 
         function showSpringPeriod1() {
+            console.log("spring-p-1");
             document.querySelector("#spring_2").classList.add("hide");
             document.querySelector("#spring_1").classList.remove("hide");
         }
 
         function showSpringPeriod2() {
+            console.log("spring-p-2");
             document.querySelector("#spring_1").classList.add("hide");
-            document.querySelector("#spring_2").classList.remove("hide");
+            document.querySelector("#spring_2").classList.add("show");
         }
 
         function fallSection() {
+            console.log("fallsection");
             document.querySelector("#fall_1").classList.remove("hide");
             document.querySelector(".period_1").addEventListener("click", showFallPeriod1);
             document.querySelector(".period_2").addEventListener("click", showFallPeriod2);
         }
 
         function showFallPeriod1() {
-            console.log("fall-p-1")
+            console.log("fall-p-1");
             document.querySelector("#fall_2").classList.add("hide");
             document.querySelector("#fall_1").classList.remove("hide");
         }
@@ -856,6 +874,22 @@
 
     </script>
     <script src="js/script.js"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5faa56b60a68960861bd76a1/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 
 </html>

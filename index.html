@@ -309,12 +309,12 @@
             <div class="column">
                 <div class="text-modal">
                     <h2>Tilmeld dig</h2>
-                    <p><span class="lang">Vælg først hvilken periode eller ophold, <br>du ønsker at tilmelde dig til.</span></p>
+                    <p><span class="lang">Vælg først hvilken periode eller ophold på højskolen, <br>du ønsker at tilmelde dig til.</span></p>
                     <button class="forår_21 blue_1">Forårsophold 2021 - start d. 6. januar</button>
                     <button class="efterår_21 blue_2">Efterårsophold 2021 - start d. 11. august</button>
                     <button class="forår_22 blue_3">Forårsophold 2022 - start d. 6. januar</button>
                     <button class="efterår_22 blue_4">Efterårsophold 2022 - start d. 10. august</button>
-                    <img src="img/logo.png" width="150px" style="position: absolute; bottom: 30px; right: 200px;">
+                    <div class="modal_logo"><img src="img/logo.png"></div>
                 </div>
                 <div class="text_modal_2 hide">
                     <h2>Forårsophold 2021</h2>
@@ -363,6 +363,7 @@
                 modal.style.display = "none";
             }
         }
+
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", eventListenerOnButtons);
@@ -414,6 +415,7 @@
             document.querySelector(".text_modal_5").classList.add("hide");
             document.querySelector(".thankyou_page").classList.remove("hide");
         }
+
     </script>
 
     <script src="js/script.js"></script>
